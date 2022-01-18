@@ -43,4 +43,12 @@ print(f"Average Change: ${AverageChange}")
 print(f"Greates Increase in Profits:: {greatestDate}, (${greatestProfits})")
 print(f"Greatest Decrease in Profits: {leastDate}, (${leastProfits})")
 
+output_path = os.path.join(pathlib.Path(__file__).parent.resolve(), ".", "output.txt")
 
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w') as out_put_file:
+    out_put_file.write(f"Total Months: {totalMonths}\n")   
+    out_put_file.write(f"Total: ${totalChange}\n")
+    out_put_file.write(f"Average Change: ${AverageChange}\n")
+    out_put_file.write(f"Greates Increase in Profits:: {greatestDate}, (${greatestProfits})\n")
+    out_put_file.write(f"Greatest Decrease in Profits: {leastDate}, (${leastProfits})\n")
